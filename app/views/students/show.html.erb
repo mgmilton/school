@@ -9,6 +9,7 @@
     <%= address.state %></br>
     <%= address.zipcode %></br></br>
     <% end %>
+  <%=link_to "Create a new address", new_student_address_path(@student) %>
   </p>
 
 <h3> <%= @student.name %>'s Courses: </h3>
