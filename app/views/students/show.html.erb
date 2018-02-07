@@ -1,4 +1,6 @@
 <h2><%= @student.name %></h2>
+
+<h3> <%= @student.name %>'s Addresses:</h3>
 <p>
   <% @student.addresses.each do |address| %>
     <%= link_to address.description, student_address_path(address.student, address) %></br>
@@ -7,4 +9,14 @@
     <%= address.state %></br>
     <%= address.zipcode %></br></br>
     <% end %>
+  <%=link_to "Create a new address", new_student_address_path(@student) %>
   </p>
+
+<h3> <%= @student.name %>'s Courses: </h3>
+
+<p>
+  <% @student.courses.each do |course| %>
+    <%=link_to course.name, course_path(course) %> </br></br>
+    <% end %>
+
+</p>
