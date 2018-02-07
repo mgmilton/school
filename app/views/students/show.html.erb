@@ -1,6 +1,6 @@
 <h2><%= @student.name %></h2>
 
-<h2> <%= @student.name %>'s Addresses:</h2>
+<h3> <%= @student.name %>'s Addresses:</h3>
 <p>
   <% @student.addresses.each do |address| %>
     <%= link_to address.description, student_address_path(address.student, address) %></br>
@@ -11,7 +11,7 @@
     <% end %>
   </p>
 
-<h2> <%= @student.name %>'s Courses: </h2>
+<h3> <%= @student.name %>'s Courses: </h3>
 
 <p>
   <% @student.courses.each do |course| %>

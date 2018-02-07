@@ -1,5 +1,5 @@
 class CoursesController < ApplicationController
   def show
-    @course = Courses.find(params[:id])
+    @course = Course.find(params[:id])
   end
 end
