@@ -6,6 +6,7 @@ describe "As a user" do
 
       visit new_student_path
       fill_in "student[name]", with: "Terrance"
+      
       click_on "Create Student"
 
       expect(page).to have_content("Terrance")
