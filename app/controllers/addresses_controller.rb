@@ -17,8 +17,8 @@ class AddressesController < ApplicationController
     @student = Student.find(params[:student_id])
     @address = @student.addresses.new(address_params)
     if @address.save
-      flash[:success] = "#{@address.name} was created!"
-      redirect_to student_addresses_path(@student)
+      flash[:success] = "#{@address.description} was created!"
+      redirect_to student_path(@student)
     else
       render :new
     end
